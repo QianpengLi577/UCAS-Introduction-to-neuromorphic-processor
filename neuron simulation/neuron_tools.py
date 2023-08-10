@@ -95,7 +95,9 @@ def plot_volt_trace_gif(pars, v, sp, save_pic=False, pic_name=''):
 		ax=plt.gca()  
 		ax.spines['right'].set_color('none')
 		ax.spines['top'].set_color('none')
+		plt.show()
+		plt.pause(0.05)
 		if save_pic is True:
 			plt.savefig('./pic/' + pic_name + str(t) + '.png')
 	plt.ioff()
-	plt.show()
+	

@@ -31,8 +31,8 @@ def run_LIF(pars, Iinj, stop=False):
 	Iinj = Iinj * np.ones(Lt)
 	# set beginning and end to 0
 	if stop:
-		Iinj[:int(len(Iinj) / 2) - 1000] = 0
-		Iinj[int(len(Iinj) / 2) + 1000:] = 0
+		Iinj[:int(len(Iinj) / 2) - 600] = 0
+		Iinj[int(len(Iinj) / 2) + 600:] = 0
 
 	# Loop over time
 	rec_spikes = []  # record spike times
@@ -54,7 +54,7 @@ def run_LIF(pars, Iinj, stop=False):
 
 if __name__ == '__main__':
 	# Get parameters
-	pars = default_pars(T=500)
+	pars = default_pars(T=400)
 
 	# Simulate LIF model
 	v, sp = run_LIF(pars, Iinj=100, stop=True)
